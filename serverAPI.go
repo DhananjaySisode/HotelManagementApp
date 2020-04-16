@@ -63,10 +63,9 @@ func RegisterCustomer(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func AddNewMenu(w http.ResponseWriter, r *http.Request) {
-	
+// func AddNewMenu(w http.ResponseWriter, r *http.Request) {
 
-}
+// }
 
 func main() {
 
@@ -75,7 +74,7 @@ func main() {
 	rout.HandleFunc("/menu/{custId}", GetMenuByCustomer).Methods("GET")
 	rout.HandleFunc("/login", LoginCustomer).Methods("POST")
 	rout.HandleFunc("/register", RegisterCustomer).Methods("POST")
-	rout.HandleFunc("/addMenu", AddNewMenu).Methods("POST")
+	//rout.HandleFunc("/addMenu", AddNewMenu).Methods("POST")
 
 	http.ListenAndServe(":8080", rout)
 }
